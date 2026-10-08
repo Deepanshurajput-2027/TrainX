@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 120%;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    background-color: #3498db;
+    transition: all 0.5s ease;
+}
+
+.box:hover {
+    width: 600px;
+    height: 600px;
+}
+
+.giftbox{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background-image: url('https://plus.unsplash.com/premium_photo-1791174686955-2e3ff17cbf26?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size:cover;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.giftbox:hover .topright ,
+.giftbox:hover .topleft,
+.giftbox:hover .bottomleft,
+.giftbox:hover .bottomright{
+    transform: rotate(180deg);
+}
+
+
+
+.covers {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transition: all 2s ease;
+}
+
+.topleft{
+    top:0;
+    left:0;
+     background-color: #e74c3c;
+     transform-origin: top left;
+}
+
+.topright{
+    top:0;
+    right:0;
+     background-color: #c0a3a0;
+     transform-origin: top right;
+}
+
+.bottomleft{
+    bottom:0;
+    left:0;
+     background-color: #f1c40f;
+     transform-origin: bottom left;
+}
+
+.bottomright{
+    bottom:0;
+    right:0;
+     background-color: #2ecc71;
+     transform-origin: bottom right;
+}
+

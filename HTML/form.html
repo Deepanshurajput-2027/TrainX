@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <h1 style="font-family: Arial, Helvetica, sans-serif;">Registration Form</h1>
+    <form action="/register" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter message" required></textarea><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" placeholder="Enter date of birth" min="18" max="61" required><br><br>
+
+        <label for="url">Website URL:</label>
+        <input type="url" id="url" name="url" placeholder="Enter website URL" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br><br>  
+
+        <label for="city">City:</label>
+        <select id="city" name="city" required>
+            <option value=""  disabled selected>Select city</option>
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="meerut">Meerut</option>
+            <option value="noida">Noida</option>
+            <option value="bangalore">Bangalore</option>
+        </select><br><br>
+
+        <label for="skills">Skills:</label>
+        <select id="skills" name="skills" multiple>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="react">React</option>
+        </select><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required><br><br>
+
+        
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">Accept Terms and Conditions:</label><br><br>
+
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
